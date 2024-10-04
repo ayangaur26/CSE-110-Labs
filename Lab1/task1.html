@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,28 +29,8 @@
         }
 
         img {
-            max-width: 100%; /* Ensure images are responsive */
+            max-width: 75%; /* Ensure images are responsive */
             height: auto;
-        }
-
-        @media screen and (max-width: 800px) {
-            nav ul {
-                display: none; /* Hide navigation links */
-            }
-
-            h2 {
-                font-size: 24px; /* Set header font size */
-            }
-
-            p {
-                font-size: 20px; /* Set paragraph text size */
-            }
-            #section3 {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr); /* 2-column grid */
-                gap: 25px;
-                padding: 20px; /* Adjust padding for smaller screens */
-            }
         }
 
         /* Horizontal navigation bar */
@@ -68,7 +49,7 @@
 
         /* Styling for anchor tags in navbar */
         nav ul li a {
-            color: white;
+            color: black;
             text-decoration: none;
             font-size: 28px;
             padding: 10px;
@@ -84,6 +65,31 @@
         nav ul li a.active {
             background-color: #182b49;
             color: white;
+        }
+
+        /* Section heading styling */
+        h2 {
+            padding: 10px;
+            margin: 0;
+            padding-left: 40px;
+        }
+
+        /* Specific styling for Section 1 heading */
+        h2.section1-heading {
+            background-color: rgb(245, 240, 230); /* Light background color */
+            color: black;
+        }
+
+        /* Specific styling for Section 2 heading */
+        h2.section2-heading {
+            background-color: #182b49; /* Blue background */
+            color: white;
+        }
+
+        /* Specific styling for Section 3 heading */
+        h2.section3-heading {
+            background-color: rgb(245, 240, 230); /* Light background color */
+            color: black;
         }
 
         /* Section 1 styling */
@@ -107,23 +113,13 @@
             width: 100%;
         }
 
-        /* Styling for text in Section 2 */
-        #section2 h2, #section2 p {
-            color: white;
-        }
-
-        /* Logo size restrictions */
-        img {
-            height: auto;
-        }
-
-        /* Styling for the 4-column grid in the new section */
+        /* Section 3 styling for 4-column grid */
         #section3 {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             background-color: rgb(245, 240, 230);
             gap: 25px;
-            padding: 50px; /* Added padding for spacing */
+            padding: 50px;
             scroll-margin-top: 90px;
         }
 
@@ -132,20 +128,41 @@
             color: white;
             padding: 20px;
             max-height: 300px;
-            overflow-y: auto; 
+            overflow-y: auto;
         }
 
         .grid-box p {
             line-height: 1.5;
         }
 
+        /* Responsive adjustments for smaller screens */
+        @media screen and (max-width: 800px) {
+            /* Hide navigation bar completely */
+            nav {
+                display: none;
+            }
+
+            #section3 {
+                grid-template-columns: repeat(2, 1fr); /* 2-column grid for smaller screens */
+                gap: 25px;
+                padding: 20px; /* Adjust padding for smaller screens */
+            }
+
+            h2 {
+                font-size: 24px; /* Set header font size */
+            }
+
+            p {
+                font-size: 20px; /* Set paragraph text size */
+            }
+        }
+
     </style>
 </head>
-    
-<body>
 
-    <nav>
-        <img src="logo_UCSD.png" alt="UCSD Logo">
+<body>
+    <img src="logo_UCSD.png" alt="UCSD Logo">
+    <nav> 
         <ul>
             <li><a href="#section1" class="active">Section 1</a></li>
             <li><a href="#section2">Section 2</a></li>
@@ -153,49 +170,37 @@
         </ul>
     </nav>
 
-
-    <!-- UCSD Logo Section -->
+    <!-- Section 1 Heading -->
+    <h2 class="section1-heading">Section 1</h2>
     <div id="section1" class="logo">
-        <h2>Section 1</h2>
-        <img src="https://brand.ucsd.edu/_images/logos-and-brand-elements/additional-campus-logos/ucsd-athletics-logo.svg" alt="Tritons Logo" width="1000px">
+        <img src="https://brand.ucsd.edu/_images/logos-and-brand-elements/additional-campus-logos/ucsd-athletics-logo.svg" alt="Tritons Logo">
     </div>
 
-    <!-- Tritons Logo Section -->
+    <!-- Section 2 Heading -->
+    <h2 class="section2-heading">Section 2</h2>
     <div id="section2" class="logo">
-        <h2>Section 2</h2>
         <div>
-            <img src="https://brand.ucsd.edu/_images/logos/logos-college-logos-07-23.svg" alt="College Logos" width="1000px">
+            <img src="https://brand.ucsd.edu/_images/logos/logos-college-logos-07-23.svg" alt="College Logos">
         </div>
     </div>
 
-    <h2>Section 3</h2>
+    <!-- Section 3 Heading -->
+    <h2 class="section3-heading">Section 3</h2>
     <div id="section3">
         <div class="grid-box">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pulvinar purus sit amet neque euismod auctor id ut nisl. Duis finibus vehicula diam ac maximus. Sed massa lacus, molestie dapibus massa at, mollis mollis dolor. In pulvinar lacus ac eros pharetra, vel tempus risus eleifend. Donec iaculis ultricies mi, sed feugiat augue sodales eu. Curabitur ultrices, arcu a aliquam pretium, sem diam ullamcorper diam, a ultrices ipsum velit eleifend ligula. Nullam porttitor nulla eget nunc rhoncus maximus in eu felis. Curabitur sed velit enim. Duis elementum, velit non rutrum commodo, orci magna pretium augue, vitae luctus dui tellus nec nulla. Donec aliquet lobortis neque, in placerat enim. Fusce nec pellentesque lacus. Sed ac diam sem. Maecenas dolor purus, euismod vel dui vitae, blandit hendrerit orci. Donec hendrerit scelerisque ex id fermentum.
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pulvinar purus sit amet neque euismod auctor id ut nisl. Duis finibus vehicula diam ac maximus. Sed massa lacus, molestie dapibus massa at, mollis mollis dolor. In pulvinar lacus ac eros pharetra, vel tempus risus eleifend. Donec iaculis ultricies mi, sed feugiat augue sodales eu. Curabitur ultrices, arcu a aliquam pretium, sem diam ullamcorper diam, a ultrices ipsum velit eleifend ligula. Nullam porttitor nulla eget nunc rhoncus maximus in eu felis. Curabitur sed velit enim. Duis elementum, velit non rutrum commodo, orci magna pretium augue, vitae luctus dui tellus nec nulla. Donec aliquet lobortis neque, in placerat enim. Fusce nec pellentesque lacus. Sed ac diam sem. Maecenas dolor purus, euismod vel dui vitae, blandit hendrerit orci. Donec hendrerit scelerisque ex id fermentum.</p>
         </div>
         <div class="grid-box">
-            Nulla facilisi. Suspendisse vestibulum in quam rhoncus efficitur. Etiam nisl urna, sagittis eget dolor non, consequat mattis massa. Suspendisse cursus sed urna sed finibus. Morbi fermentum enim in velit efficitur, ut ullamcorper purus mollis. Nullam interdum orci nec nisl porttitor varius. Cras gravida auctor leo vel convallis. Nulla vel ullamcorper purus. Nam massa tellus, molestie sit amet arcu vel, pulvinar sagittis erat. Curabitur et hendrerit neque, eu egestas ex. Duis rutrum tortor vel laoreet tristique. Aliquam erat volutpat. Nunc tristique finibus placerat. Aenean sed lobortis turpis. Fusce elementum ligula magna, nec vehicula justo eleifend et. Ut sed tortor blandit, blandit diam ut, mollis enim.
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pulvinar purus sit amet neque euismod auctor id ut nisl. Duis finibus vehicula diam ac maximus. Sed massa lacus, molestie dapibus massa at, mollis mollis dolor. In pulvinar lacus ac eros pharetra, vel tempus risus eleifend. Donec iaculis ultricies mi, sed feugiat augue sodales eu. Curabitur ultrices, arcu a aliquam pretium, sem diam ullamcorper diam, a ultrices ipsum velit eleifend ligula. Nullam porttitor nulla eget nunc rhoncus maximus in eu felis. Curabitur sed velit enim. Duis elementum, velit non rutrum commodo, orci magna pretium augue, vitae luctus dui tellus nec nulla. Donec aliquet lobortis neque, in placerat enim. Fusce nec pellentesque lacus. Sed ac diam sem. Maecenas dolor purus, euismod vel dui vitae, blandit hendrerit orci. Donec hendrerit scelerisque ex id fermentum.</p>
         </div>
         <div class="grid-box">
-            Integer lorem lacus, vulputate vel est ut, accumsan pulvinar augue. Duis dapibus molestie nisl, quis mollis neque iaculis in. Duis et consequat massa, sit amet tempor libero. Maecenas eu rhoncus mi. Nullam vel nisl auctor, mollis turpis ac, posuere sem. Proin sagittis luctus quam vitae mollis. Mauris id velit quis nisl dictum rutrum at eu mi. Quisque quis egestas ex. Proin urna odio, congue et eros et, eleifend consequat quam. Aliquam aliquet non diam eu tincidunt. Aliquam et justo lacus.
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pulvinar purus sit amet neque euismod auctor id ut nisl. Duis finibus vehicula diam ac maximus. Sed massa lacus, molestie dapibus massa at, mollis mollis dolor. In pulvinar lacus ac eros pharetra, vel tempus risus eleifend. Donec iaculis ultricies mi, sed feugiat augue sodales eu. Curabitur ultrices, arcu a aliquam pretium, sem diam ullamcorper diam, a ultrices ipsum velit eleifend ligula. Nullam porttitor nulla eget nunc rhoncus maximus in eu felis. Curabitur sed velit enim. Duis elementum, velit non rutrum commodo, orci magna pretium augue, vitae luctus dui tellus nec nulla. Donec aliquet lobortis neque, in placerat enim. Fusce nec pellentesque lacus. Sed ac diam sem. Maecenas dolor purus, euismod vel dui vitae, blandit hendrerit orci. Donec hendrerit scelerisque ex id fermentum.</p>
         </div>
         <div class="grid-box">
-            Donec finibus posuere ipsum in mattis. Curabitur at lorem nisl. Pellentesque placerat, nisl eu faucibus vestibulum, mi tellus faucibus mi, id porta ex justo vitae augue. Vivamus feugiat nisl eget dui aliquam, eu iaculis ipsum consequat. Donec ac aliquam leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae eros ac elit volutpat ultricies commodo at arcu. Phasellus porta, ipsum a hendrerit euismod, nisi risus viverra nibh, at hendrerit urna sapien vel neque. Aenean sed maximus felis, et vehicula nunc. Ut nulla nisi, mollis vitae gravida eget, efficitur sit amet nibh. Aenean neque mi, molestie sed quam ac, fringilla venenatis enim. Donec consectetur commodo orci, at fringilla quam viverra sit amet. Vestibulum commodo lectus risus, id tempor felis malesuada vel. Mauris vulputate nec lectus vitae malesuada.
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pulvinar purus sit amet neque euismod auctor id ut nisl. Duis finibus vehicula diam ac maximus. Sed massa lacus, molestie dapibus massa at, mollis mollis dolor. In pulvinar lacus ac eros pharetra, vel tempus risus eleifend. Donec iaculis ultricies mi, sed feugiat augue sodales eu. Curabitur ultrices, arcu a aliquam pretium, sem diam ullamcorper diam, a ultrices ipsum velit eleifend ligula. Nullam porttitor nulla eget nunc rhoncus maximus in eu felis. Curabitur sed velit enim. Duis elementum, velit non rutrum commodo, orci magna pretium augue, vitae luctus dui tellus nec nulla. Donec aliquet lobortis neque, in placerat enim. Fusce nec pellentesque lacus. Sed ac diam sem. Maecenas dolor purus, euismod vel dui vitae, blandit hendrerit orci. Donec hendrerit scelerisque ex id fermentum.</p>
         </div>
     </div>
-
     
-    <script>
-        // Add interactivity to highlight the active link in the navigation
-        const navLinks = document.querySelectorAll('nav ul li a');
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.forEach(l => l.classList.remove('active')); // Remove active from all links
-                link.classList.add('active'); // Add active to clicked link
-            });
-        });
-    </script>
-
 </body>
+
 </html>
