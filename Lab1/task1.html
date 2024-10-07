@@ -200,7 +200,18 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pulvinar purus sit amet neque euismod auctor id ut nisl. Duis finibus vehicula diam ac maximus. Sed massa lacus, molestie dapibus massa at, mollis mollis dolor. In pulvinar lacus ac eros pharetra, vel tempus risus eleifend. Donec iaculis ultricies mi, sed feugiat augue sodales eu. Curabitur ultrices, arcu a aliquam pretium, sem diam ullamcorper diam, a ultrices ipsum velit eleifend ligula. Nullam porttitor nulla eget nunc rhoncus maximus in eu felis. Curabitur sed velit enim. Duis elementum, velit non rutrum commodo, orci magna pretium augue, vitae luctus dui tellus nec nulla. Donec aliquet lobortis neque, in placerat enim. Fusce nec pellentesque lacus. Sed ac diam sem. Maecenas dolor purus, euismod vel dui vitae, blandit hendrerit orci. Donec hendrerit scelerisque ex id fermentum.</p>
         </div>
     </div>
+
+    <script>
+        // Add interactivity to highlight the active link in the navigation
+        const navLinks = document.querySelectorAll('nav ul li a');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.forEach(l => l.classList.remove('active')); // Remove active from all links
+                link.classList.add('active'); // Add active to clicked link
+            });
+        });
+    </script>
     
 </body>
-
 </html>
