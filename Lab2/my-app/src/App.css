@@ -110,3 +110,44 @@
   background-color: rgb(220, 89, 89);
   color: white;
  }
+
+ body.light {
+  background-color: lightgrey;
+  color: black;
+}
+
+body.dark {
+  background-color: #333;
+  color: white;
+}
+
+.app-container.light {
+  background-color: white;
+}
+
+.app-container.dark {
+  background-color: #444;
+}
+
+.note-item.light {
+  background-color: #f9f9f9;
+}
+
+.note-item.dark {
+  background-color: #555;
+}
+
+.theme-toggle-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  border: none;
+  background-color: #888;
+  color: white;
+  cursor: pointer;
+}
+
+.theme-toggle-btn:hover {
+  background-color: #555;
+}
