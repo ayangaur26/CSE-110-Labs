@@ -33,7 +33,7 @@ export const dummyNotesList = [
     },
     {
         id: 6,
-        title: "test note 6",
+        title: "Note to Delete",
         content: "test note 6",
         label: Label.personal,
     },
